@@ -1,6 +1,6 @@
 install:
-	sudo cp ./lfrun /usr/bin/lfrun
-	sudo chmod +x /usr/bin/lfrun
+	sudo cp ./lfrun ~/.radvil/bin/lfrun
+	sudo chmod +x ~/.radvil/bin/lfrun
 	@if [ ! -d ~/.config/lf/ ]; then\
 		mkdir -p ~/.config/lf ;\
 	fi
@@ -19,7 +19,7 @@ install:
 	fi
 
 uninstall:
-	sudo rm /usr/bin/lfrun
+	sudo rm ~/radvil/bin/lfrun
 	sudo rm ~/.config/lf/cleaner ~/.config/lf/preview
 	sed -i '/set previewer/d' ~/.config/lf/lfrc
 	sed -i '/set cleaner/d' ~/.config/lf/lfrc
